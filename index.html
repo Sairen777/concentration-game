@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="css/custom-bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container" id="start-screen" data-tid="App">
+    <!--Главный экран-->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-5 col-md-7">
+        <img src="assets/StartGame@2x.png" class="img-fluid" alt="Memory Game">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center mb-3">
+        <h2 class="text-uppercase text-white">Memory Game</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-light font-weight-bold font-green"
+          onclick="utility.startNewGame()" data-tid="NewGame-startGame">
+          Начать игру
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--Экран игры-->
+  <div class="container d-none" id="game-screen">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-2 mt-5 game-screen-text">
+        <a id="gamescreen-restart-button"class="text-white" 
+          onclick="utility.startNewGame()" data-tid="Menu-newGame">
+          Начать заново
+        </a>
+        <p class="text-white float-right">
+          Очки:
+          <span class="score-field" data-tid="Menu-scores">0</span>
+        </p>
+      </div>
+    </div>
+
+    <div id="card-cells" class="row" data-tid="Deck"></div>
+  </div>
+
+  <!--Экран конца игры-->
+  <div class="container d-none" id="game-over-screen">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+        <img src="assets/Group 2@2x.png" class="img-fluid mt-5" alt="Memory Game">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center mb-3">
+        <h3 class="text-white">Поздравляем!</h3>
+        <h3 class="text-white">Ваш итоговый счет: <span class="score-field">0</span></h3>        
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col text-center">
+        <button type="button" class="btn btn-light font-weight-bold font-green"
+        onclick="utility.startNewGame()" data-tid="EndGame-retryGame">Еще раз</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous">
+  </script>
+  <script src="js/MemoryGame.js"></script>
+  <script src="js/Utility.js"></script>  
+</body>
+
+</html>

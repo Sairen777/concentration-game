@@ -1,0 +1,45 @@
+html {
+  font-size: 0.8rem;
+}
+
+@media (min-width:540px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:960px) {
+  html {
+    font-size: 1.1rem;
+  }
+}
+
+body {
+  background-color: #1B6D2E;
+}
+
+img {
+  margin-bottom: 1rem;
+}
+
+.font-green {
+  color: #1B6D2E;
+}
+
+.game-screen-text a,
+.game-screen-text p {
+  opacity: 0.8;
+  font-weight: lighter;
+}
+
+#gamescreen-restart-button {
+  cursor: pointer;  
+}
+
+#gamescreen-restart-button:hover {
+  opacity: 1;
+}
+
+.selected {
+  pointer-events: none;
+}
