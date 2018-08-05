@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container" id="start-screen" data-tid="App">
+  <div class="container" id="start-screen">
     <!--Главный экран-->
     <div class="row justify-content-center mt-5">
       <div class="col-lg-5 col-md-7">
@@ -27,8 +27,8 @@
     <div class="row">
       <div class="col text-center">
         <button type="button" class="btn btn-light font-weight-bold font-green"
-          onclick="utility.startNewGame()" data-tid="NewGame-startGame">
-          Начать игру
+          onclick="utility.startNewGame()">
+          Start game
         </button>
       </div>
     </div>
@@ -39,17 +39,17 @@
     <div class="row">
       <div class="col-lg-6 offset-lg-2 mt-5 game-screen-text">
         <a id="gamescreen-restart-button"class="text-white" 
-          onclick="utility.startNewGame()" data-tid="Menu-newGame">
-          Начать заново
+          onclick="utility.startNewGame()">
+          Restart
         </a>
         <p class="text-white float-right">
           Очки:
-          <span class="score-field" data-tid="Menu-scores">0</span>
+          <span class="score-field">0</span>
         </p>
       </div>
     </div>
 
-    <div id="card-cells" class="row" data-tid="Deck"></div>
+    <div id="card-cells" class="row"></div>
   </div>
 
   <!--Экран конца игры-->
@@ -62,15 +62,15 @@
 
     <div class="row">
       <div class="col text-center mb-3">
-        <h3 class="text-white">Поздравляем!</h3>
-        <h3 class="text-white">Ваш итоговый счет: <span class="score-field">0</span></h3>        
+        <h3 class="text-white">Congratulations!</h3>
+        <h3 class="text-white">Your score: <span class="score-field">0</span></h3>        
       </div>
     </div>
 
     <div class="row">
       <div class="col text-center">
         <button type="button" class="btn btn-light font-weight-bold font-green"
-        onclick="utility.startNewGame()" data-tid="EndGame-retryGame">Еще раз</button>
+        onclick="utility.startNewGame()">Play again</button>
       </div>
     </div>
   </div>
