@@ -65,7 +65,6 @@ var utility = (function() {
     cardImageElement.src = "assets/Cards/" + cardName + ".png";
     cardImageElement.alt = cardName;
     cardImageElement.classList.add("img-fluid");
-    cardImageElement.setAttribute("data-tid", "Card-flipped");
 
     return cardImageElement;
   };
